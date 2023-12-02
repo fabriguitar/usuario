@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PruebaCntroller;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,5 @@ ROUTE::GET('/usuario', [UsuarioController::class,'index']);
 
 ROUTE::GET('/usuario/crear', [UsuarioController::class,'crear'])->name('usuario.crear');
 ROUTE::POST('/usuario/guardar', [UsuarioController::class,'store'])->name('usuario.guardar');
+
+ROUTE::GET('/prueba/inicio', [PruebaCntroller::class,'index'])->name('prueba.inicio');
